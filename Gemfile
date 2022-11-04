@@ -46,6 +46,9 @@ gem 'bootsnap', require: false
 gem 'pry-nav'
 gem 'pry-rails'
 
+# 認証
+gem 'sorcery'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
