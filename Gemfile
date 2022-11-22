@@ -46,6 +46,18 @@ gem 'bootsnap', require: false
 gem 'pry-nav'
 gem 'pry-rails'
 
+# 認証
+gem 'sorcery'
+
+# 国際化
+gem 'enum_help'
+gem 'rails-i18n'
+
+# bootstrap
+gem 'bootstrap', '~> 5.1.3'
+gem 'mini_racer'
+gem 'sassc-rails'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -74,4 +86,10 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+end
+
+group :test do
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
 end

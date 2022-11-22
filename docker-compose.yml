@@ -13,6 +13,8 @@ services:
       - chrome
     stdin_open: true
     tty: true
+    environment:
+      SELENIUM_DRIVER_URL: http://chrome:4444/wd/hub
   db:
     image: mysql:5.7.33
     environment:
@@ -28,4 +30,3 @@ services:
 volumes:
   bundle:
   mysql_data:
-
