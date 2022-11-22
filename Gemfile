@@ -54,9 +54,9 @@ gem 'enum_help'
 gem 'rails-i18n'
 
 # bootstrap
-gem "sassc-rails"
 gem 'bootstrap', '~> 5.1.3'
 gem 'mini_racer'
+gem 'sassc-rails'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
