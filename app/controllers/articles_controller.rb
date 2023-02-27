@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
   before_action :require_login, only: %i[new create edit update destroy]
   def index
     @articles = Article.all
+    @twitter_users = TwitterUser.all 
   end
 
   def new

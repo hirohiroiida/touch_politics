@@ -58,6 +58,13 @@ gem 'bootstrap', '~> 5.1.3'
 gem 'mini_racer'
 gem 'sassc-rails'
 
+# twitter導入に必要
+gem 'typhoeus'
+gem 'oauth'
+
+# 定数管理
+gem 'dotenv-rails'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

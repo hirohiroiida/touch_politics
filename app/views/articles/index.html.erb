@@ -3,7 +3,23 @@ aaaaa
   <div class="row justify-content-center bg-success">
   aaaaa
     <div class="col-xl-5 col-md-8 bg-info">
-      aaaa
+      
+      <%= form_with model: @twitter_user, url: twitter_users_path, local: true do |f| %>
+        <%= f.text_field :username, placeholder: 'TwitterIDを入力（例：yoiyoicho）' %>
+        <%= f.submit 'このuserを保存する' %>
+      <% end %>
+
+      <br><br>
+
+      <% @twitter_users.each do |user| %>
+        <%= user.username %>
+        <%= user.name %>
+        <%= user.user_id %>
+        <%= button_to "削除する", twitter_user_path(user), method: :delete, data: {confirm:"本当によろしいですか？"} %>
+        <br>
+      <% end %>
+
     </div>
+    <%= link_to 'ログイン', login_path, class: 'btn btn-link px-3 me-2' %>
   </div>
 </div>

@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   delete 'logout', to: 'user_sessions#destroy'
 
   resources :articles
+
+  get 'twitter/search', to: 'tweets#search'
+  get 'twitter/show', to: 'tweets#show'
+  resources :twitter_users
 end
