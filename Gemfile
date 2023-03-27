@@ -65,6 +65,9 @@ gem 'oauth'
 # 定数管理
 gem 'dotenv-rails'
 
+# カレンダー
+gem "simple_calendar", "~> 2.4"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

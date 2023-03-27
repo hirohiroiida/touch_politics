@@ -11,3 +11,6 @@ ja:
   attributes:
     created_at: '作成日時'
     updated_at: '更新日時'
+  simple_calendar:
+    previous: "<<"
+    next: ">>"

@@ -12,6 +12,7 @@ aaaaa
       <br><br>
 
       <% @twitter_users.each do |user| %>
+        <%= link_to user.username, twitter_user_path(user) %>
         <%= user.username %>
         <%= user.name %>
         <%= user.user_id %>

@@ -1,0 +1,7 @@
+<%= month_calendar do |date| %>
+  <%= date.day %>
+  <% tweet_count = tweet_count_by_day[date] %>
+  <% if tweet_count > 0 %>
+    <span class="tweet-count"><%= tweet_count %></span>
+  <% end %>
+<% end %>
