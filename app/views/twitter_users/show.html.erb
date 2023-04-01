@@ -1,7 +1,14 @@
-<%= month_calendar do |date| %>
+
+
+<%= button_to "Save latest tweet", { controller: "tweets", action: "create", id: params[:id] }, method: :post %>
+
+<%= month_calendar events: @tweets do |date, tweets| %>
+  
   <%= date.day %>
-  <% tweet_count = tweet_count_by_day[date] %>
-  <% if tweet_count > 0 %>
-    <span class="tweet-count"><%= tweet_count %></span>
+  <% tweets.each do |tweet| %>
+    <div>
+      <%= tweet.tweet_id %>
+    </div>
+    <br>
   <% end %>
 <% end %>
