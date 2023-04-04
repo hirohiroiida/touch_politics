@@ -3,6 +3,11 @@ class TwitterUsersController < ApplicationController
   require 'typhoeus'
   require 'date'
 
+  def index
+    @twitter_users = TwitterUser.all
+
+  end
+
   def create
     user_data = get_userid(params[:username])
     

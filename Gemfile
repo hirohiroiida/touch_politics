@@ -46,9 +46,6 @@ gem 'bootsnap', require: false
 gem 'pry-nav'
 gem 'pry-rails'
 
-# 認証
-gem 'sorcery'
-
 # 国際化
 gem 'enum_help'
 gem 'rails-i18n'
