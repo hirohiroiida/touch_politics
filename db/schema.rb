@@ -11,15 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_03_29_191210) do
-  create_table "articles", charset: "utf8mb4", force: :cascade do |t|
-    t.string "title", null: false
-    t.text "body", null: false
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_articles_on_user_id"
-  end
-
   create_table "tweets", primary_key: "tweet_id", charset: "utf8mb4", force: :cascade do |t|
     t.text "text"
     t.datetime "start_time"
@@ -35,17 +26,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_29_191210) do
     t.timestamp "created_at"
   end
 
-  create_table "users", charset: "utf8mb4", force: :cascade do |t|
-    t.string "email", null: false
-    t.string "crypted_password"
-    t.string "salt"
-    t.string "username", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["username"], name: "index_users_on_username", unique: true
-  end
-
-  add_foreign_key "articles", "users"
   add_foreign_key "tweets", "twitter_users", primary_key: "user_id"
 end
