@@ -1,20 +1,35 @@
-
-
-<%= button_to "Save latest tweet", { controller: "tweets", action: "create", id: params[:id] }, method: :post %>
+<div class= "row">
+  <div class="col-auto" >
+    <p>まずtweetを取得してください。（最大100件分取得します）</p>
+  </div>
+  <div class="col-auto" >
+    <%= button_to "tweet取得", { controller: "tweets", action: "create", id: params[:id] }, method: :post , class: 'btn btn-success' %>
+  </div>
+</div>
 
 <div class="calendar">
   <%= month_calendar events: @tweets do |date, tweets| %>
     <div class="card">
-      <div class="card-header">
-        <%= date.day %>
+      <div class="card-header row align-items-center">
+        <div class="col-4">
+          <%= date.day %>
+        </div>
+        <div class="col-8 ml-auto text-success small">
+          tweet数<%= tweets.count %>
+        </div>
       </div>
       <ul class="list-group list-group-flush">
-        <% tweets.each do |tweet| %>
-          <li class="list-group-item">
-            <%= tweet.text %>
-          </li>
-        <% end %>
+        <div class="p-3 mt-2 overflow-auto" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0" style="height:200px">
+          <% tweets.each do |tweet| %>
+            <li class="list-group-item">
+              <%= tweet.start_time.strftime("%H:%M:%S") %>
+              <br>
+              <%= tweet.text %>
+            </li>
+          <% end %>
+        </div>
       </ul>
     </div>
   <% end %>
 </div>
+

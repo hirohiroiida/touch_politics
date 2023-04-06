@@ -16,11 +16,12 @@
   </head>
 
   <body>
-    <%= render 'layouts/topbar' %>
     <%= render 'layouts/header' %>
     <%= render 'shared/flash_messages' %>
     <div>
-      <%= yield %>
+      <div class="mx-3 my-3">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

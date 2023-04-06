@@ -54,6 +54,7 @@ gem 'rails-i18n'
 gem 'bootstrap', '~> 5.1.3'
 gem 'mini_racer'
 gem 'sassc-rails'
+gem 'jquery-rails'
 
 # twitter導入に必要
 gem 'typhoeus'
